@@ -44,11 +44,9 @@ const login = prompt('Введите пожалуйста логин :');
 
 if (login === null || login === '') {
   alert(userRefused);
-}
-else if (login !== adminLogin) {
+} else if (login !== adminLogin) {
   alert(invalidLogin);
-}
-else {
+} else {
   const password = prompt('Введите пароль');
   if (password === null || password === '') {
     alert(userRefused);
