@@ -29,19 +29,57 @@ const adminPassword = 'm4ngo1zh4ackz0r';
 
 /*=============================================================================================*/
 
-const adminLogin = 'admin';
-const adminPassword = 'm4ngo1zh4ackz0r';
+
+// const adminLogin = 'admin';
+// const adminPassword = 'm4ngo1zh4ackz0r';
+
+// message for 'alert' in variable // parol && login //
+
+// const userRefused = 'Отменено пользователем !';
+// const invalidLogin = 'Доступ запрещен, неверный логин !';
+// const invalidPassword = 'Доступ запрещен, неверный пароль !';
+// const validPassword = 'Добро пожаловать !';
+
+// const login = prompt('Введите пожалуйста логин :');
+
+// if (login === null || login === '') {
+//   alert(userRefused);
+// }
+// else if (login !== adminLogin) {
+//   alert(invalidLogin);
+// }
+// else {
+//   const password = prompt('Введите пароль');
+//   if (password === null || password === '') {
+//     alert(userRefused);
+//   }
+//   else if (password !== adminPassword) {
+//     alert(invalidPassword);
+//   }
+//  else {
+//    alert(validPassword);
+//  }
+// }
 
 
-// message for 'alert' in variable
+/*==============================================================================================*/
 
-// parol && login
-const userRefused = 'Отменено пользователем!';
-const invalidLogin = 'Доступ запрещен, неверный логин!';
-const validLogin = 'Введите пароль!';
-
-const invalidPassword = 'Доступ запрещен, неверный пароль';
-const validPassword = 'Добро пожаловать!';
+// const adminLogin = 'admin';
+// const adminPassword = 'm4ngo1zh4ackz0r';
 
 
+// const userRefused = 'Отменено пользователем !';
+// const invalid = 'Доступ запрещен, неверный логин или пароль !';
+// const validPassword = 'Добро пожаловать !';
 
+// const login = prompt('Введите логин :');
+// const password = prompt('Введите пароль :');
+
+// if (login === null || login === '') {
+//   alert(userRefused);
+// } 
+// else if (login !== adminLogin && password !== adminPassword) {
+//   alert(invalid);
+// } else {
+//    alert(validPassword);
+//  }
