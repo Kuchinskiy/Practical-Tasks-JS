@@ -1,9 +1,9 @@
 "use strict";
 
 /*
-* Перепишите Function Declaration и замените код на стрелочную-функцию =>
-* чтобы он также работал как и через объявление функции.
-*/
+ * Перепишите Function Declaration и замените код на стрелочную-функцию =>
+ * чтобы он также работал как и через объявление функции.
+ */
 
 // !!! Function Declaration
 
@@ -82,19 +82,16 @@
 //     }
 // }
 
-
 // !!! Arrow Functions
 
 // const checkAge = (age) =>
 //   age > 18 ? () => true : () => confirm("Родители разрешили?");
-
 
 // !!! Function Declaration with Ternary operator
 
 // function checkAge(age) {
 //     return (age > 18) ? true : confirm('Родители разрешили?');
 // }
-
 
 /*
 * Напишите функцию min(a, b) , которая возвращает меньшее из чисел a и b.
@@ -104,7 +101,6 @@
 * -//- min(3, -1) результат -->>> (== -1)
 * -//- min(1, 1) результат -->>> (== 1)
 */
-
 
 // !!! Function Declaration with Ternary operator
 
@@ -116,7 +112,6 @@
 // alert(min(3, -1)); // -1
 // alert(min(1, 1)); // 1
 
-
 // !!! Arrow Functions with Ternary operator
 
 // const min = (a, b) => a < b ? a : b;
@@ -124,7 +119,6 @@
 // alert(min(2, 5)); // 2
 // alert(min(3, -1)); // -1
 // alert(min(1, 1)); // 1
-
 
 /*
 * Используйте стрелочную функцию чтобы отобразить в консоле неограниченое
@@ -135,8 +129,35 @@
 
 // const drawCats = howManyTimes => {
 //     for (let i = 0; i < howManyTimes; i++) {
-//         console.log(i + ' =^.^='); // через конкатынацию 
+//         console.log(i + ' =^.^='); // через конкатынацию
 //         console.log(`${[i]} К-во: =^.^=`); // через шаблонные строки
 //     }
 // };
 // drawCats(7);
+
+
+/*
+* Совпадают ли массивы??? 
+* Напишите функцию 'areArraysSame' которая принимает два массива
+* с числами в качестве аргументов и возвращает 'true' если одинаковые
+* или 'false' если различаются.
+*/
+
+// !!! Function Declaration
+
+// function areArraysSame(arr, array) {
+//   if (arr.length !== array.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== array[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(areArraysSame([1, 2, 3], [4, 5, 6])); // false
+// console.log(areArraysSame([1, 2, 3], [1, 2, 3])); // true
+// console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4])); // false
+
+
