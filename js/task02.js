@@ -145,19 +145,22 @@
 
 // !!! Function Declaration
 
-// function areArraysSame(arr, array) {
-//   if (arr.length !== array.length) {
-//     return false;
-//   }
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] !== array[i]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
-// console.log(areArraysSame([1, 2, 3], [4, 5, 6])); // false
-// console.log(areArraysSame([1, 2, 3], [1, 2, 3])); // true
-// console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4])); // false
+function areArraysSame(arr, array) {
 
+  if (arr.length !== array.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== array[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(areArraysSame([1, 2, 3], [4, 5, 6])); // false
+console.log(areArraysSame([1, 2, 3], [1, 2, 3])); // true
+console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4])); // false
 
