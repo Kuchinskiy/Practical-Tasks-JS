@@ -5,7 +5,9 @@ const words = [
     'коллбек', 
     'функция', 
     'разметка', 
-    'оформление'
+    'оформление',
+    'событие',
+    'цикл'
 ];
 
 // Выбираем случайное слово
@@ -19,15 +21,19 @@ const answerArray = [];
 for (let i = 0; i < word.length; i++) {
     answerArray[i] = '_';
 }
-// Переменная ramainingLetters необходима чтобы отслеживать к-во букв,которые осталось угадать;
+/*
+Переменная ramainingLetters необходима чтобы отслеживать к-во букв,которые осталось угадать;
+И, выполнять декриментацию '--'  в цикле for когда обновляется состояние игры;
+При каждом совпадении с guess уменшать на 1;
+*/
 let ramainingLetters = word.length;
 // Создаем игровой цикл;
 while (ramainingLetters > 0) {
     // Показать состояние игры
     alert(answerArray.join(' '));
     // Запросить вариант ответа
-    const guess = prompt('Угадай букву, или нажми Отмена для выхода из игры.');
-    
+    const guess = prompt('Угадай букву, или нажми Отмена для выхода из игры:');
+
     if (guess === null) {
         break;
     } else if (guess.length !== 1) {
@@ -35,10 +41,15 @@ while (ramainingLetters > 0) {
     } else {
         // Обновить состояние игры
         for (let j = 0; j < word.length; j++) {
-            if (word[j] === guess) {
-                answerArray[j] = guess;
-                ramainingLetters --;
-            }
+            if (word[j].toLowerCase() === guess.toLowerCase()) {
+
+                if (answerArray[j] === '_') {
+                    ramainingLetters --;
+                    answerArray[j] = guess.toLowerCase();
+                } else {
+                    alert('Такую букву вы уже угадали');
+                }
+            } 
         }
     }
     // Конец игрового цикла
