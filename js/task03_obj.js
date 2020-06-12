@@ -41,3 +41,13 @@
 
 // alert('age' in user); // true, user.age существует
 // alert('blabla' in user); // false, user.blabla не существует
+
+
+// Оператор "in" для свойств со значением 'undefined'(особый случай и нужен оператор "in"):
+// const obj = {
+//     test: undefined,
+// };
+
+// alert(obj.test); // выведет 'undefined' якобы такого свойства не существует!?
+// alert('test' in obj); // true, так будет правильно,если значение 'undefined'
+

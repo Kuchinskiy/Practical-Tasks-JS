@@ -58,3 +58,4 @@ while (ramainingLetters > 0) {
 alert(answerArray.join(' '));
 alert(`Поздравляем вы угадали слово: ${word}`);
 
+
