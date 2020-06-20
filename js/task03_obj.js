@@ -35,6 +35,25 @@
 * если у объекта нет свойств, иначе false .
 */
 
+function isEmpety(obj) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+let schedule = {};
+// console.log(schedule);
+alert(isEmpety(schedule)); // true (ДА, obj БЕЗ свойств(пустой))
+// цикл "for" НЕ встретил свойства;
+
+schedule['8:30'] = 'get up';
+// console.log(schedule);
+alert(isEmpety(schedule)); // false (НЕТ, obj не пустой СО свойствами(имеються))
+// цикл "for" ВСТРЕТИЛ свойства;
+
 
 // Вычисляемые свойства : испол.квадратные скобки для создания вычисляемого свойства;
 
