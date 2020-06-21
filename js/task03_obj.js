@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 * Создайте объект user;
@@ -29,30 +29,93 @@
 // Доступ к свойству через переменную
 // alert( user[key] ); // Jhon (если ввели 'name')
 
-
 /*
 * Напишите функцию isEmpty(obj) , которая возвращает true ,
 * если у объекта нет свойств, иначе false .
 */
 
-function isEmpety(obj) {
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            return false;
-        }
-    }
-    return true;
+// function isEmpety(obj) {
+
+//     for (let key in obj) {
+//        if (obj.hasOwnProperty(key)) {
+//       return false;
+//      }
+//   }
+//   return true;
+// }
+
+// let schedule = {};
+// console.log(schedule);
+// alert(isEmpety(schedule)); // true (ДА, obj БЕЗ свойств(пустой))
+// цикл "for" НЕ встретил свойства;
+// !!! Для пустого объекта возвращает "true"
+
+// schedule['8:30'] = 'get up';
+// console.log(schedule);
+// alert(isEmpety(schedule)); // false (НЕТ, obj не пустой СО свойствами(имеються))
+// цикл "for" ВСТРЕТИЛ свойства;
+// !!! Если свойство в объекте существует возвращает "false"
+
+/*
+* Можно ли изменить объект, объявленный через "const"? Как вы думаете?
+*/
+
+// const user = {
+//     name: 'Jhon',
+// };
+
+// Сработает или нет ?
+// user.name = 'Pete'; //  Да, конечно БЕЗ ПРОБЛЕМ, вносим изменения в содержимое объекта!!!
+
+// user = 123; // Будет ОШИБКА, попытка поментя ссылку в памяти!!!
+
+/*
+!!! "const" - защищает саму переменную(user) от изменений, так как переменная
+!!! "user" -->> хранит ССЫЛКУ на объект котрую НЕЛЬЗЯ изменить!
+* Само содержимое объекта можно изменять (удалить, добавить, поменять итп...);
+*/
+
+// ---------------------------------------------------------------------------------------
+
+/*
+* Напишите код для суммирования всех зарплат и сохраните результат в переменной "sum".
+* Результат должен получиться -->> 390.
+* Если объект "salaries" пуст, то результат должен быть 0.
+*/
+
+let salaries = {
+  Jhon: 100,
+  Ann: 160,
+  Peter: 130,
+};
+
+// Version - 1
+let summ = 0;
+
+for (let key in salaries) {
+    summ += salaries[key]
 }
 
-let schedule = {};
-// console.log(schedule);
-alert(isEmpety(schedule)); // true (ДА, obj БЕЗ свойств(пустой))
-// цикл "for" НЕ встретил свойства;
+console.log(`Result: ${summ}`);
 
-schedule['8:30'] = 'get up';
-// console.log(schedule);
-alert(isEmpety(schedule)); // false (НЕТ, obj не пустой СО свойствами(имеються))
-// цикл "for" ВСТРЕТИЛ свойства;
+// Version - 2
+let total = 0;
+
+function makeSumm(obj) {
+  obj = Object.values(salaries);
+
+  if (obj.hasOwnProperty(salaries.key)) {
+     return 0;
+  }
+
+  for (const velue of obj) {
+      total += velue;
+  }
+  return total;
+}
+
+let sum = makeSumm();
+console.log(`Total: ${sum}`); // 390 или 0 -->>  если объект пуст;
 
 
 // Вычисляемые свойства : испол.квадратные скобки для создания вычисляемого свойства;
@@ -66,7 +129,6 @@ alert(isEmpety(schedule)); // false (НЕТ, obj не пустой СО свой
 // };
 
 // alert(bag.apple); // 5, если fruit = 'apple'
-
 
 // Проверка на существования свойства в объекте
 // const user = {};
@@ -85,7 +147,6 @@ alert(isEmpety(schedule)); // false (НЕТ, obj не пустой СО свой
 // alert('age' in user); // true, user.age существует
 // alert('blabla' in user); // false, user.blabla не существует
 
-
 // Оператор "in" для свойств со значением 'undefined'(особый случай и нужен оператор "in"):
 // const obj = {
 //     test: undefined,
@@ -93,7 +154,6 @@ alert(isEmpety(schedule)); // false (НЕТ, obj не пустой СО свой
 
 // alert(obj.test); // выведет 'undefined' якобы такого свойства не существует!?
 // alert('test' in obj); // true, так будет правильно,если значение 'undefined'
-
 
 /*
 Целые числа идут в порядке ВОЗРОСТАНИЯ(1, 41, 44, 49), а целочисленные перебираются
@@ -126,5 +186,3 @@ alert(isEmpety(schedule)); // false (НЕТ, obj не пустой СО свой
 // for (let code in codes) {
 //   alert( +code ); // 1, 41, 44, 49
 // }
-
-
