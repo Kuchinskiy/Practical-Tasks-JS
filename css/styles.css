@@ -1,12 +1,6 @@
 /* DEFAULT */
 
-/* 
-*{
-   margin: 0;
-   padding: 0;
-} */
-
-/* .visually-hidden:not(:focus):not(:active),
+.visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -25,17 +19,17 @@ input[type="radio"].visually-hidden {
 }
 
 html {
-    box-sizing: border-box;
-} */
+  box-sizing: border-box;
+}
 
 /* Cafe Starbuzz */
 body {
-    background-color: #d2b48c;
-    margin: 20% 20%;
-    border: 2px dotted black;
-    padding: 10px 10px 10px 10px;
-    font-size: 25px;
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 0 14px 28px rgba(24, 24, 25, 0.25), 
-        0 10px 10px rgba(24, 24, 25, 0.22);
+  background-color: #d2b48c;
+  margin: 20% 20%;
+  border: 2px dotted black;
+  padding: 10px 10px 10px 10px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 14px 28px rgba(24, 24, 25, 0.25), 
+  0 10px 10px rgba(24, 24, 25, 0.22);
 }
