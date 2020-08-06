@@ -24,6 +24,7 @@ html {
 
 /* Cafe Starbuzz */
 body {
+  text-align: center;
   background-color: #d2b48c;
   margin: 20% 20%;
   border: 2px dotted black;
