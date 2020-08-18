@@ -132,26 +132,26 @@
 * P.S. Используйте typeof для проверки, что значение свойства числовое.
 */
 
-let menu = {
-  width: 200,
-  height: 300,
-  title: 'My menu',
-};
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'My menu',
+// };
 
-console.log(menu); // числовые свойства до: 200, 300;
+// console.log(menu); // числовые свойства до: 200, 300;
 
-function multiplyNumeric(obj) {
+// function multiplyNumeric(obj) {
 
-  for (let key in obj) {
-    if ( typeof obj[key] === 'number') {
-      obj[key] *= 2;
-    }
-  }
-}
+//   for (let key in obj) {
+//     if ( typeof obj[key] === 'number') {
+//       obj[key] *= 2;
+//     }
+//   }
+// }
 
-multiplyNumeric(menu); // после перебора свойств в цикле проверяем через оператор "typeof" 
+// multiplyNumeric(menu); // после перебора свойств в цикле проверяем через оператор "typeof" 
 // ключи[key] по условию заданому через "if" на ЧИСЛО, чтобы "*" все числовые свойства на 2;
-console.log(menu); // числовые свойства после: 400, 600;
+// console.log(menu); // числовые свойства после: 400, 600;
 
 // ------------------------------------------------------------------------------------------------------------
 
@@ -223,3 +223,16 @@ console.log(menu); // числовые свойства после: 400, 600;
 // for (let code in codes) {
 //   alert( +code ); // 1, 41, 44, 49
 // }
+
+// Свойства-функции объекта для совершения действия(например: по приветствовать пользователя):
+const user = {
+  name: 'James',
+  age: 45
+};
+
+user.sayHello = function() {
+  alert('Hi! Привет! Здоровенькі були!');
+};
+
+// user.sayHello();  // Hi! Привет! Здоровенькі були!
+
