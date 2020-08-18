@@ -235,9 +235,9 @@ const user = {
 // !!! Функция, которая является СВОЙСТВОМ объекта, называют МЕТОДОМ этого объекта:
 // *** итак, мы получили МЕТОД -->> sayHello объекта user;
 
-user.sayHello = function() {
-  alert('Hi! Привет! Здоровенькі були!');
-};
+// user.sayHello = function() {
+//   alert('Hi! Привет! Здоровенькі були!');
+// };
 
 // user.sayHello();  // Hi! Привет! Здоровенькі були!
 
@@ -247,12 +247,29 @@ user.sayHello = function() {
 // };
 
 // сначала объявляем
-function sayHi() {
-  alert('Hello');
-}
+// function sayHi() {
+//   alert('Hello');
+// }
 
 // затем присваиваем(добавляем) в качестве метода
-user.sayHi = sayHi;
+// user.sayHi = sayHi;
 
 // Вызываем функцию как метод объекта
 // user.sayHi();
+
+// Более короткий синтаксис для методов в литерале объекта:
+const user1 = {
+  sayHi: function() {
+    alert('Hello1');
+  }
+}; // Вариант - 1
+
+// user1.sayHi();
+
+const user2 = {
+  sayHi() {
+    alert('Hello2');
+  }
+}; // Вариант - 2
+
+// user2.sayHi();
