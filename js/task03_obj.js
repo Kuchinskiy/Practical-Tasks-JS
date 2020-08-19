@@ -293,7 +293,7 @@ const user2 = {
 //*** и имеет различное значение "this"при вызовах:
 
 let user = { name: "Lui" };
-let admin = { name: "Admin" };
+// let admin = { name: "Admin" };
 
 // Объявляем функцию
 function sayHi() {
@@ -303,10 +303,23 @@ alert( this.name );
 // используем одну и ту же функцию в двух объектах
 // присваиваем в качестве метода
 user.f = sayHi;
-admin.f = sayHi;
+// admin.f = sayHi;
 
 // "this" внутри функции является ссылкой на объект, который указан "перед точкой"
 // при вызове obj.f() значение this внутри f равно obj -->>> (user or admin) .
 
 // user.f();  // Джон (this == user)
 // admin.f();  // Админ (this == admin)
+
+
+//!!! Стрелочные функции НЕ ИМЕЮТ собственного "this" значение берется из внешней функции:
+
+const admin = {
+  firstName: 'Serg',
+  sayHi() {
+    let arrow = () => alert(this.firstName);
+    arrow();
+  }
+};
+// ??? Здесь значение "this" в стрелочной функции 'arrow()' использует внешнюю функцию admin.sayHi()
+admin.sayHi(); // Serg
