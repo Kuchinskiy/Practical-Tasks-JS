@@ -259,19 +259,19 @@
 // user.sayHi();
 
 // Более короткий синтаксис для методов в литерале объекта:
-const user1 = {
-  sayHi: function () {
-    alert("Hello1");
-  },
-}; // Вариант - 1
+// const user1 = {
+//   sayHi: function () {
+//     alert("Hello1");
+//   },
+// }; // Вариант - 1
 
 // user1.sayHi();
 
-const user2 = {
-  sayHi() {
-    alert('Hello2');
-  }
-}; // Вариант - 2
+// const user2 = {
+//   sayHi() {
+//     alert('Hello2');
+//   }
+// }; // Вариант - 2
 
 // user2.sayHi();
 
@@ -288,21 +288,20 @@ const user2 = {
 
 // user.sayHi(); // Jeery
 
-
-//!!! Одна и та же функция назначена двум разным объектам 
+//!!! Одна и та же функция назначена двум разным объектам
 //*** и имеет различное значение "this"при вызовах:
 
-let user = { name: "Lui" };
+// let user = { name: "Lui" };
 // let admin = { name: "Admin" };
 
 // Объявляем функцию
-function sayHi() {
-alert( this.name );
-}
+// function sayHi() {
+// alert( this.name );
+// }
 
 // используем одну и ту же функцию в двух объектах
 // присваиваем в качестве метода
-user.f = sayHi;
+// user.f = sayHi;
 // admin.f = sayHi;
 
 // "this" внутри функции является ссылкой на объект, который указан "перед точкой"
@@ -311,15 +310,16 @@ user.f = sayHi;
 // user.f();  // Джон (this == user)
 // admin.f();  // Админ (this == admin)
 
-
 //!!! Стрелочные функции НЕ ИМЕЮТ собственного "this" значение берется из внешней функции:
 
-const admin = {
-  firstName: 'Serg',
-  sayHi() {
-    let arrow = () => alert(this.firstName);
-    arrow();
-  }
-};
+// const admin = {
+//   firstName: 'Serg',
+//   sayHi() {
+//     let arrow = () => alert(this.firstName);
+//     arrow();
+//   }
+// };
+
 // ??? Здесь значение "this" в стрелочной функции 'arrow()' использует внешнюю функцию admin.sayHi()
-admin.sayHi(); // Serg
+// admin.sayHi();  // Serg
+
