@@ -35,3 +35,7 @@ body {
   box-shadow: 0 14px 28px rgba(24, 24, 25, 0.25), 
   0 10px 10px rgba(24, 24, 25, 0.22);
 }
+
+address {
+  font-style: normal;
+}
