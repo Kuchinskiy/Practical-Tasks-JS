@@ -1,0 +1,36 @@
+/* DEFAULT */
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+body {
+  text-align: center;
+  background-color: #d2b48c;
+  margin: 20% 20%;
+  border: 1px solid gray;
+  padding: 10px 10px 10px 10px;
+  font-size: 25px;
+  font-family: 'Do Hyeon', sans-serif;
+  box-shadow: 0 14px 28px rgba(24, 24, 25, 0.25), 
+  0 10px 10px rgba(24, 24, 25, 0.22);
+}
