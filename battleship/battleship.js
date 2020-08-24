@@ -29,11 +29,14 @@ while (isSunk === false) {
         isSunk = true;
         alert("You sank my battleship!");
       }
+    } else {
+      alert("MISS");
     }
   }
 }
 
-let stats = `You took ${guesses} guesses to sink the battleship
-                which means your shooting accuracy was (3/guesses)`;
+let stats = `You took ${guesses} guesses to sink the battleship which means your shooting accuracy was ${
+  3 / guesses
+}`;
 
-alert(stats);
+alert(atats);
