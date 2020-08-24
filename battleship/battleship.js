@@ -12,3 +12,8 @@ let guesses = 0; // определяет подсчитывая, сколько 
 
 let isSunk = false; // определяет и сохраняет инфу о том уничтожена цель или нет, будет изменяться на 'true';
 
+// Создаем цикл для запуска игры;
+// while (isSunk === false) {
+    
+//     guess = prompt('Ready, aim, fire! (enter a number 0-6):');
+// }
