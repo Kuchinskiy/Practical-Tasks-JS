@@ -16,4 +16,10 @@ let isSunk = false; // определяет и сохраняет инфу о т
 // while (isSunk === false) {
     
 //     guess = prompt('Ready, aim, fire! (enter a number 0-6):');
+
+//     if (guess < 0 || guess > 6) {
+//         alert('Please enter a valid cell number!');
+//     } else {
+//         guesses += 1;
+//     }
 // }
