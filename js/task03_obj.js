@@ -323,3 +323,29 @@
 // ??? Здесь значение "this" в стрелочной функции 'arrow()' использует внешнюю функцию admin.sayHi()
 // admin.sayHi();  // Serg
 
+/*
+ * Создайте объект calculator (калькулятор) с тремя методами:
+ * read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
+ * sum() (суммировать) возвращает сумму сохранённых значений.
+ * mul() (умножить) перемножает сохранённые значения и возвращает результат.
+ */
+
+let calculator = {
+
+  read() {
+    this.oneVelue = Number(prompt("Enter the number?", 0));
+    this.twoVelue = Number(prompt("Enter the number?", 0));
+  },
+
+  sum() {
+    return this.oneVelue + this.twoVelue;
+  },
+
+  mul() {
+    return this.oneVelue * this.twoVelue;
+  },
+};
+
+calculator.read();
+alert(calculator.sum());
+alert(calculator.mul());
