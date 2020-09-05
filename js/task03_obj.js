@@ -333,16 +333,16 @@
 let calculator = {
 
   read() {
-    this.oneVelue = Number(prompt("Enter the number?", 0));
-    this.twoVelue = Number(prompt("Enter the number?", 0));
+    this.firstVelue = Number(prompt("Enter the number?", 0));
+    this.secondVelue = Number(prompt("Enter the number?", 0));
   },
 
   sum() {
-    return this.oneVelue + this.twoVelue;
+    return this.firstVelue + this.secondVelue;
   },
 
   mul() {
-    return this.oneVelue * this.twoVelue;
+    return this.firstVelue * this.secondVelue;
   },
 };
 
