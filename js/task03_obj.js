@@ -352,30 +352,51 @@ let calculator = {
 
 
 /*
- * Измените код методов 'up', 'down' и 'showStep' таким образом, чтобы их вызов можно
- * было сделать по цепочке, например так:
- * --//-- ladder.up().up().down().showStep(); // 1
+ * Измените код методов 'up', 'down' и 'showStep'(написаный ниже) таким образом, чтобы их вызов можно
+ * было сделать НЕ в последовательности вызовов(метода), а по -->> цепочке, например так:
+ * --->>>  ladder.up().up().down().showStep();  // 1
 */
+
+// const ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//   },
+
+//   down() {
+//     this.step--;
+//   },
+
+//   showStep: function() { // объявление метода в ES5
+//     alert(this.step);
+//   }
+// };
+
+//* Работа методов при последовательности вызовов(проверка кода):
+// ladder.up();
+// ladder.up();
+// ladder.down();
+// ladder.showStep();  // 1
+
 
 const ladder = {
   step: 0,
   up() {
     this.step++;
+    return this;
   },
 
-  down() {
+  down() { // объявление метода в ES6
     this.step--;
+    return this;
   },
 
   showStep: function() { // объявление метода в ES5
     alert(this.step);
+    return this;
   }
 };
 
-// Проверка работы методов при последовательности вызовов:
-// ladder.up();
-// ladder.up();
-// ladder.down();
-// ladder.showStep(); // 1
-
+//* Работа методов по цепочке(проверка кода):
+ladder.up().up().down().showStep();
 
