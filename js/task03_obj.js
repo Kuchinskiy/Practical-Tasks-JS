@@ -346,6 +346,34 @@ let calculator = {
   },
 };
 
-calculator.read();
-alert(calculator.sum());
-alert(calculator.mul());
+// calculator.read();
+// alert(calculator.sum());
+// alert(calculator.mul());
+
+
+/*
+
+*/
+
+const ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+
+  down() {
+    this.step--;
+  },
+
+  showStep: function() { // объявление метода в ES5
+    alert(this.step);
+  }
+};
+
+// Проверка работы методов при последовательности вызовов:
+// ladder.up();
+// ladder.up();
+// ladder.down();
+// ladder.showStep(); // 1
+
+
