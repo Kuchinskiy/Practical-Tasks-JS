@@ -399,5 +399,6 @@ const ladder = {
 };
 
 //* Работа методов по цепочке(проверка кода):
-ladder.up().up().down().showStep();
+// ladder.up().up().down().showStep();
+
 
