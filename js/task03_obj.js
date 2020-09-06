@@ -379,6 +379,7 @@ let calculator = {
 // ladder.showStep();  // 1
 
 
+// Для работы методов объекта по ЦЕПОЧКЕ при их вызове задействуем в методе директиву 'return' :
 const ladder = {
   step: 0,
   up() {
