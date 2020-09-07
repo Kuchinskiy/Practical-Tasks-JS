@@ -40,9 +40,3 @@ let stats = `You took ${guesses} guesses to sink the battleship which means your
 }`;
 
 // alert(stats);
-
-let onSale = true;
-let inStock = true;
-
-let buyIt = (inStock || onSale);
-alert(buyIt);
