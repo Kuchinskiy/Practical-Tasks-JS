@@ -1,9 +1,9 @@
 "use strict";
 
 // Инициализируем через пременные 'location' координаты размещения;
-const location1 = 3;
-const location2 = 4;
-const location3 = 5;
+let location1 = randomLoc; // используем случайную начальную позицию (от 0 до 4);
+const location2 = location1 + 1; // со смещением в смежных клетках;
+const location3 = location2 + 1;
 
 // Переменные для действий пользователя;
 let guess; // определяет номер текущей попытки, поэтому не инициализирована и по умолчанию JS присваивает(underfined);
