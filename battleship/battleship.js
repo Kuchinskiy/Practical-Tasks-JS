@@ -1,9 +1,11 @@
 // "use strict";
 
 // Инициализируем через пременные 'location' координаты размещения;
-let location1 = randomLoc; // используем случайную начальную позицию (от 0 до 4);
+const randomLoc = Math.floor(Math.random() * 5);
+const location1 = randomLoc; // используем случайную начальную позицию (от 0 до 4);
 const location2 = location1 + 1; // со смещением в смежных клетках;
 const location3 = location2 + 1;
+
 
 // Переменные для действий пользователя;
 let guess; // определяет номер текущей попытки, поэтому не инициализирована и по умолчанию JS присваивает(underfined);
@@ -39,4 +41,4 @@ let stats = `You took ${guesses} guesses to sink the battleship which means your
   3 / guesses
 }`;
 
-// alert(stats);
+alert(stats);
