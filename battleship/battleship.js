@@ -15,30 +15,30 @@ let guesses = 0; // определяет подсчитывая, сколько 
 let isSunk = false; // определяет и сохраняет инфу о том уничтожена цель или нет, будет изменяться на 'true';
 
 // Создаем цикл для запуска игры;
-// while (isSunk == false) {
-//   guess = prompt("Ready, aim, fire! (enter a number 0-6):");
+while (isSunk == false) {
+  guess = prompt("Ready, aim, fire! (enter a number 0-6):");
 
-//   if (guess < 0 || guess > 6) {
-//     alert("Please enter a valid cell number!");
-//   } else {
-//     guesses += 1;
+  if (guess < 0 || guess > 6) {
+    alert("Please enter a valid cell number!");
+  } else {
+    guesses += 1;
 
-//     if (guess == location1 || guess == location2 || guess == location3) {
-//       alert("HIT!");
-//       hits += 1;
+    if (guess == location1 || guess == location2 || guess == location3) {
+      alert("HIT!");
+      hits += 1;
 
-//       if (hits == 3) {
-//         isSunk = true;
-//         alert("You sank my battleship!");
-//       }
-//     } else {
-//       alert("MISS");
-//     }
-//   }
-// }
+      if (hits == 3) {
+        isSunk = true;
+        alert("You sank my battleship!");
+      }
+    } else {
+      alert("MISS");
+    }
+  }
+}
 
-// let stats = `You took ${guesses} guesses to sink the battleship which means your shooting accuracy was ${
-//   3 / guesses
-// }`;
+let stats = `You took ${guesses} guesses to sink the battleship which means your shooting accuracy was ${
+  3 / guesses
+}`;
 
-// alert(stats);
+alert(stats);
