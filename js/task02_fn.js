@@ -178,3 +178,21 @@ function whatShallWear (temp) {
 whatShallWear(50);
 whatShallWear(80);
 whatShallWear(60);
+
+
+function doIt(info) {
+ info;
+}
+
+let birthdayBoy = `Jhon, 1991`;
+doIt(birthdayBoy);
+console.log(birthdayBoy);
+
+// let birthday = 1991;
+// doIt(birthday);
+// console.log(birthday);
+
+// let name = 'Jhon';
+// doIt(name);
+// console.log(name);
+
