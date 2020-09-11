@@ -165,19 +165,19 @@
 // console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4])); // false
 
 
+const user = {
+  name: 'Cool',
+  age: 23,
+  birthday: 2001,
+  country: 'Ukraine'
+};
+
+console.log(doIt(user));
+
 function doIt(info) {
- info;
+ return info;
 }
 
-let birthdayBoy = `Jhon, 1991, USA`;
-doIt(birthdayBoy);
-console.log(birthdayBoy);
-
-let birthday = 1991;
-doIt(birthday);
-console.log(birthday);
-
-let name = 'Jhon';
-doIt(name);
-console.log(name);
+let birthdayBoy = `name: Jhon, date: 1991, country: USA`;
+console.log(doIt(birthdayBoy));
 
