@@ -165,34 +165,19 @@
 // console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4])); // false
 
 
-function whatShallWear (temp) {
-  if (temp < 60) {
-    console.log('Wear a jacket');
-  } else if (temp < 70) {
-    console.log('Wear a sweater');
-  } else {
-    console.log('Wear t-shirt');
-  }
-}
-
-whatShallWear(50);
-whatShallWear(80);
-whatShallWear(60);
-
-
 function doIt(info) {
  info;
 }
 
-let birthdayBoy = `Jhon, 1991`;
+let birthdayBoy = `Jhon, 1991, USA`;
 doIt(birthdayBoy);
 console.log(birthdayBoy);
 
-// let birthday = 1991;
-// doIt(birthday);
-// console.log(birthday);
+let birthday = 1991;
+doIt(birthday);
+console.log(birthday);
 
-// let name = 'Jhon';
-// doIt(name);
-// console.log(name);
+let name = 'Jhon';
+doIt(name);
+console.log(name);
 
