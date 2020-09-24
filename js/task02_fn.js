@@ -172,11 +172,12 @@ const user = {
   country: 'Ukraine'
 };
 
-console.log(doIt(user));
 
 function doIt(info) {
- return info;
+  return info;
 }
+
+console.log(doIt(user));
 
 let birthdayBoy = `name: Jhon, date: 1991, country: USA`;
 console.log(doIt(birthdayBoy));
