@@ -167,9 +167,20 @@
 
 function doIt(param) {
   param = 2;
-  
+
   return value;
 }
 
 const value = 1;
 console.log(doIt(value));
+
+
+const age = 7;
+
+function addOne (x) {
+  x = x * 3;
+
+  return x;
+}
+
+console.log(addOne(age));
