@@ -165,6 +165,8 @@
 // console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4])); // false
 
 
+// !!! Передача по значению т.е посредством копирования
+
 function doIt(param) {
   param = 2;
 
@@ -172,15 +174,15 @@ function doIt(param) {
 }
 
 const value = 1;
-console.log(doIt(value));
+console.log(doIt(value)); // аргумент КОПИРУЕТСЯ в локальную переменную(парметр);
 
 
 const age = 7;
 
-function addOne (x) {
+function addOne (x) { // 'x' содержит копию ИСХОДНОГО значения переменной 'age';
   x = x * 3;
 
   return x;
 }
 
-console.log(addOne(age));
+console.log(addOne(age)); // копируется ЗНАЧЕНИЕ 'age' в параметр 'x';
