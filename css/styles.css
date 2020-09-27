@@ -24,6 +24,9 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.letter::first-letter {
+  color: #e91e63;
+}
 
 /* Cafe Starbuzz */
 /* body {
