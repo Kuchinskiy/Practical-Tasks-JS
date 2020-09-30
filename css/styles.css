@@ -24,6 +24,10 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.square {
+  list-style-type: square;
+}
+
 .letter::first-letter {
   color: #e91e63;
 }
@@ -38,6 +42,8 @@ p {
 
 .link {
   text-decoration: none;
+  color: rgba(230, 30, 99, 0.7);
+  text-transform: uppercase;
 }
 
 
