@@ -28,6 +28,20 @@ input[type="radio"].visually-hidden {
   color: #e91e63;
 }
 
+p {
+  text-indent: 25px;
+  color: rgba(230, 30, 99, 0.5);
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.link {
+  text-decoration: none;
+}
+
+
+
 /* Cafe Starbuzz */
 /* body {
   text-align: center;
