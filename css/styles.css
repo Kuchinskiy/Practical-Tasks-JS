@@ -36,14 +36,15 @@ p {
   text-indent: 25px;
   color: rgba(230, 30, 99, 0.5);
   font-size: 30px;
-  font-weight: 700;
   font-style: italic;
+  font-family: 'Roboto', sans-serif;
 }
 
 .link {
   text-decoration: none;
-  color: rgba(230, 30, 99, 0.7);
+  color: rgba(230, 30, 99, 0.3);
   text-transform: uppercase;
+  font-weight: 900;
 }
 
 
